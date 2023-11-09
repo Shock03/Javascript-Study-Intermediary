@@ -264,6 +264,24 @@ console.log(hoje.getDate())  */
 
 
 
+/* PROMISES: -> SINCRONO E ASSINCRONO.
+const minhaPromisse = new Promise((resolve, reject) => {
+  let condicao = false;
+  if(condicao){
+    resolve('Resolvido')
+  } else {
+    reject(Error('Um erro aconteceu na promisse'))
+  }
+})
+
+// THEN e CATCH:
+minhaPromisse.then((resultado) => {
+  console.log(resultado)
+}).catch((error) => {
+  console.log(error)
+}) */
+
+
 
 
 
