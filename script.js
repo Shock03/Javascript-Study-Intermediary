@@ -126,13 +126,14 @@ function estados (...estados){
 estados('PA', 'RJ', 'SP', 'SC', 'CE');
 
 
-// SPREAD: -> DISTRIBUI ITENS DE UM ARRAY OU OBJETO EM OUTRO.
+// SPREAD ARRAY: -> DISTRIBUI ITENS DE UM ARRAY OU OBJETO EM OUTRO.
 const carrosAltos = ['Hilux', 'S10', 'Pajero', 'Ranger']
 const carrosBaixos = ['HB20', 'Gol', 'Celta', 'Corsa']
 
 const carros = [...carrosAltos, ...carrosBaixos];
 
 console.log(carros)
+
 
 // SPREAD OBJETO:
 const pessoa = {
@@ -151,5 +152,123 @@ const dados = {
   ...endereco
 }
 */
+
+
+
+
+ /* ARRAY/OBJETOS E ITERADORES:
+const estoque = ['arroz', 'feijão', 'arroz', 'macarrão', 'batata', '']   //ARRAY
+const precos = [3.50, 5, 3.50, 2, 2.50, 0]
+const pessoas = [{nome:'Breno', idade: 26}, {nome:'Arlete', idade: 27}]   //OBJETO
+const endereco = [{cidade:'Belém', estado:'PA', pais:'Brasil'}, {cidade:'Macapá', estado:'AP', pais:'Brasil'}]
+
+endereco.forEach((valor, index, array) => {     //ITERADOR forEach
+  console.log(valor, index, array)
+})
+
+const retornoMap = estoque.map((valor, index, array) => {      //ITERADOR Map
+  return `${valor} ${index}`   //Template String, concatenando valor mais index no novo array.
+})
+
+const total = precos.reduce((acc, valor, index, array) => {      //ITERADOR reduce
+  return acc + valor     // acc -> acumulador, resultado da iteração anterior.
+}, 0)    // 0 -> valor default para a primeira iteração tbm ter um acumulador.
+
+const resultado = estoque.find((valor, index, array) => {      //ITERADOR find
+  return valor;
+})
+
+const resultado = estoque.findIndex((valor, index, array) => {      //ITERADOR findIndex
+  return valor;
+})
+
+const resultado = estoque.some ((valor, index, array) => valor );     //ITERADOR some
+
+const resultado = estoque.every ((valor, index, array) => valor );      //ITERADOR every 
+
+const resultado = estoque.filter ((valor, index, array) => valor === 'arroz' );      //ITERADOR filter */
+
+
+
+
+/* MÉTODOS E PROPRIEDADES DAS FUNÇÕES:
+function retornaNome (name, age) {
+  console.log(name, this.profissao, this.cidade)
+}
+
+// PROPRIEDADES: -> LENGHT
+retornaNome.length; // 2
+retornaNome.name;  //retornaNome
+
+// PRINCIPAIS MÉTODOS:
+retornaNome.call({profissao:'Programador', cidade:'Belém'}, 'Breno', 26)
+retornaNome.apply({profissao:'Programador', cidade:'Belém'}, ['Breno', 26])  //mesma coisa do CALL, porém, os valores dos argumen. são passados em um array.
+const novaFuncao = retornaNome.bind({profissao:'Programador', cidade:'Belém'}, 'Breno', 26)   //Não executa a função, apenas retorna e armazena em uma const.
+
+novaFuncao () */
+
+
+
+
+/* MÉTODOS E PROPRIEDADES DE OBJETOS:
+const dados = {
+  name: 'Breno',
+  idade: 26
+  
+}
+
+const endereco = {
+  cidade: 'Belém',
+  estado: 'PA'
+}
+
+Object.assign(dados, endereco)  //O primeiro parametro é o que vai receber os métodos e propriedades do segundo parametro, ou seja, dados vai receber de endereco.
+console.log(dados)
+
+console.log(Object.keys(dados))
+console.log(Object.values(dados)) */
+
+
+
+
+/* MÉTODOS E PROPRIEDADES DO NUMBER, MATH E DATE:
+const numero = 10
+const string1 = '20'
+const string2 = '20.9'
+const numeroQuebrado = 10.8
+
+Number.parseFloat(string1)  // 20
+Number.parseInt(string2, 10)  // 20
+numeroQuebrado.toFixed()  // 11
+numero.toString()  // '10'
+
+Math.abs(-5)  // 5
+Math.ceil(4.3)  // 5
+Math.floor(4.9)  // 4
+Math.round(4.7)  // 5
+console.log((Math.random()* 200).toFixed())  // GERA UM NÚMERO ALEÁTORIO DE 0 A 200, PORÉM, SÓ NÚMEROS INTEIROS (toFixed).
+Math.max(3,2,7,14)  // 14
+Math.min(3,2,7,14)  // 2
+
+const hoje = new Date();
+
+hoje.getDate()  // 09
+hoje.getMonth()  // 11
+hoje.getFullYear()  // 2023
+hoje.getHours() // 10
+hoje.getMinutes()  // 30
+hoje.getDay()  // 4
+
+console.log(hoje.getDate())  */
+
+
+
+
+
+
+
+
+
+
 
 
