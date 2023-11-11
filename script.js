@@ -284,9 +284,30 @@ minhaPromisse.then((resultado) => {
 
 
 
+/* FETCH & JSON: -> http -> CRUD -> Endpoint -> API -> CORS
+fetch('https://api.coingecko.com/api/v3/exchange_rates',  // ENDPOINT por padrão usando, apenas, o método GET. Somente consulta.
+ { 
+      mode: 'cors',
+      method: 'POST',       // Apenas um exemplo de POST, pois o ENDPOINT usado não está preparado para receber informações.
+      body: {
+          name: 'Breno',
+          age: 26
+      },
+      headers: {
+
+          // INFORMAÇÕES ADICIONAIS ...
+
+      }   
+    }).then((data) => {
+      console.log(data)
+})
 
 
+// EXEMPLO DE JSON: -> MÉTODOS JSON (PARSE & STRIGIFY)
+const obj = {"name": "Breno", "age": 26}  // aspas duplas ("") tanto nas chaves, quanto na String, para ser um objeto JSON.
 
+JSON.parse()
+JSON.stringify() */
 
 
 
