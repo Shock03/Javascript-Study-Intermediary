@@ -311,3 +311,65 @@ JSON.stringify() */
 
 
 
+
+/* ASYNC & AWAIT:
+async function getCoinData() {
+    try {
+      const data = await fetch('https://api.coingecko.com/api/v3/exchange_rates');
+      const json = await data.json();
+      console.log(json)
+    } catch (error) {
+        console.log(error)
+    }
+
+}
+
+getCoinData(); */
+
+
+
+
+/* LOCAL STORAGE:
+localStorage.setItem("name", "Breno");    // Passando as informações através do conjunto de chave + valor.
+console.log(localStorage.getItem("name"));  // Pegando/mostrando as informações no console, com o getItem.
+
+// SESSION STORAGE:
+sessionStorage.setItem("name", "Breno");
+console.log(sessionStorage.getItem("name"));
+
+// COOKIES:
+document.cookie = "name=Breno" */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
